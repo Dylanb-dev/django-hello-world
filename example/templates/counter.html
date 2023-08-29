@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter Page</title>
+</head>
+<body>
+    <h1>Counter Page</h1>
+    <p id="counter-display">0</p>
+    <button id="increment-button">Increment</button>
+    <button id="decrement-button">Decrement</button>
+
+    <script>
+        var count = 0;
+        document.getElementById('increment-button').addEventListener('click', function() {
+            count++;
+            document.getElementById('counter-display').textContent = count;
+        });
+        document.getElementById('decrement-button').addEventListener('click', function() {
+            if (count > 0) {
+                count--;
+                document.getElementById('counter-display').textContent = count;
+            }
+        });
+    </script>
+</body>
+</html>
+
